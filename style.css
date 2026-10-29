@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+nav {
+    padding: 25px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff3b3b;
+}
+
+section {
+    padding: 80px 10%;
+}
+
+#home {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+p{
+    max-width: 650px;
+    line-height: 1.7;
+    color: #ccc;
+}
+
+a {
+    color:#ff3b3b;
+}
+
+#skills li,
+#markets li {
+    margin: 10px 0;
+}
+
+#projects div {
+    margin: 20px 0;
+}
+
+form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 15px;
+    background-color: #1c1c1c;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    padding: 15px;
+    background-color: #ff3b3b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e02f2f;
+}
+
+#contact a {
+    display: inline-block;
+    margin: 20px 15px 0 0;
+    color: #ff3b3b;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+#home h1 {
+    font-size: 60px;
+    line-height: 1.1;
+}
+
+#home h1 span {
+    color: #ff3b3b;
+    text-shadow: 0 0 15px rgba(255, 59, 59, 0.4);
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+section h2 {
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #ff3b3b;
+    left: 0;
+    bottom: -8px;
+}
+
+#project > div {
+    background-color: #1a1a1a;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 1px solid #292929;
+    transition: 0.3s;
+}
+
+#projects > div:hover {
+    transform: translateY(-5px);
+    border-color: #fbfbfb;
+}
+
+#skills li,
+#markets li {
+    display: inline-block;
+    background-color: #1a1a1a;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 20px;
+    border: 1px solid #333;
+}
+
+@media (max-width: 768px) {
+    nav{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    nav a {
+        margin: 5px;
+    }
+    section {
+        padding: 60px 7%;
+    }
+    #home h1 {
+        font-size: 40px;
+    }
+    #home p {
+        font-size: 16px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
